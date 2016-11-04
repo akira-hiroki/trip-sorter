@@ -67,20 +67,3 @@ For example, running `gulp component --name signup --parent auth` will create a 
 Running `gulp component --name footer --parent ../common` creates a `footer` component at `client/app/common/footer`.  
 
 Because the argument to `--name` applies to the folder name **and** the actual component name, make sure to camelcase the component names.
-
-# Starter Kit Support and Questions
-> Contact us, anytime, regarding anything about this project.
-
-* [Gitter: angularclass/NG6-starter](https://gitter.im/angularclass/NG6-starter)
-* [Twitter: @AngularClass](https://twitter.com/AngularClass)
-
-___
-
-enjoy — **AngularClass** 
-
-<br><br>
-
-[![AngularClass](https://cloud.githubusercontent.com/assets/1016365/9863770/cb0620fc-5af7-11e5-89df-d4b0b2cdfc43.png  "Angular Class")](https://angularclass.com)
-##[AngularClass](https://angularclass.com)
-> Learn AngularJS, Angular 2, and Modern Web Development from the best.
-> Looking for corporate Angular training, want to host us, or Angular consulting? hello@angularclass.com
