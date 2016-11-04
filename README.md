@@ -67,3 +67,6 @@ For example, running `gulp component --name signup --parent auth` will create a 
 Running `gulp component --name footer --parent ../common` creates a `footer` component at `client/app/common/footer`.  
 
 Because the argument to `--name` applies to the folder name **and** the actual component name, make sure to camelcase the component names.
+
+## Live URL
+http://kiran-app.herokuapp.com/
