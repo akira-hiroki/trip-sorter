@@ -1,0 +1,1 @@
+web: gulp webpack && gulp

@@ -1,0 +1,50 @@
+<md-content class="md-padding" layout="column">  
+  <div class="header" layout="column">
+    <h1>Trip Sorter</h1>
+    <p>Select a <i>Departure</i> city and <i>Arrival</i> city to plan your journey!<br>Make use of the quick filters to find the <b>best</b> options</p>
+  </div>
+  <md-card>
+    <md-card-content layout="row">
+      <md-input-container flex="45" class="home-input">
+        <label>From</label>
+        <md-select ng-model="$ctrl.fromCity">
+          <md-option ng-repeat="size in $ctrl.cities" value="{{size}}">{{size}}</md-option>
+        </md-select>
+      </md-input-container>
+      <md-button class="md-fab">
+        <md-icon md-font-icon="fa-exchange" class="fa button-icon"></md-icon>
+      </md-button>
+      <md-input-container flex="45" class="home-input">
+        <label>To</label>
+        <md-select ng-model="$ctrl.toCity">
+          <md-option ng-repeat="size in $ctrl.cities" value="{{size}}">{{size}}</md-option>
+        </md-select>
+      </md-input-container>
+    </md-card-content>
+    <md-card-actions layout="row">
+      <md-radio-group ng-model="$ctrl.mode" layout="row" flex="50" layout-align="start center">
+        <md-radio-button value="Cheapest" class="md-primary">Cheapest</md-radio-button>
+        <md-radio-button value="Fastest">Fastest</md-radio-button>
+        <md-radio-button value="All">All</md-radio-button>
+      </md-radio-group>
+      <section layout="row" flex="50" layout-align="end center">
+        <md-button class="md-raised" ng-click="$ctrl.reset()">Reset</md-button>
+        <md-button class="md-raised md-primary" ng-click="$ctrl.search()">Search</md-button>
+      </section>
+    </md-card-actions>
+  </md-card>
+
+  <md-card class="home-card" ng-if="$ctrl.pathObject">
+    <md-list flex="50" class="home-list" ng-cloak>
+      <md-list-item class="home-item" ng-repeat="path in $ctrl.pathObject">
+        <p>{{ path.departure }} > {{ path.arrival }} <br> {{ path.transport }} {{ path.reference }} for {{ path.duration.h }} h {{ path.duration.m }} m</p>
+        <span class="md-secondary">{{ path.cost }} EUR</span>
+      </md-list-item>
+      <md-list-item class="home-total">
+        <p class="home-bold" flex="50">Total</p>
+        <p class="home-bold" flex="50">{{$ctrl.totalHours}}h {{$ctrl.totalMinutes}}m</p>
+        <span class="md-secondary home-bold">{{ $ctrl.totalCost }} EUR</span>
+      </md-list-item>
+    </md-list>
+  </md-card>
+</md-content>
